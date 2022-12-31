@@ -79,6 +79,7 @@ func main() {
 			// Enviamos la transaccion al servidor
 			fmt.Println("Ingrse el monto a retirar")
 			fmt.Scan(&dato)
+			// Validamos que el monto sea valdo
 			if dato > cuenta.Saldo {
 				fmt.Println("Saldo insuficiente")
 				time.Sleep(time.Second)
@@ -94,6 +95,7 @@ func main() {
 			// Enviamos la transaccion al servidor
 			fmt.Println("Ingrse el nuevo nip de 4 digitos")
 			fmt.Scan(&dato)
+			// validamos que el nip sea valido
 			if dato < 1000 || dato > 9999 {
 				fmt.Println("NIP invalido")
 				time.Sleep(time.Second)

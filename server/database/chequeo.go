@@ -39,6 +39,7 @@ func Chequeo(cuenta models.Cuenta) (models.Cuenta, error) {
 	} else {
 		err = errors.New("Cuenta no existe")
 	}
+	// Comparamos el nip introducido por el usuario y el de la base de datos
 	if nip != cuenta.NIP {
 		log.Println("NIP incorrecto")
 		return cuenta, errors.New("nip incorrecto")

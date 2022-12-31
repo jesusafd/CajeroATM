@@ -9,9 +9,10 @@ import (
 	"github.com/CajeroAutomatico/server/models"
 )
 
-type CuentaDAO struct {
-}
+// CuentaDAO es la clase que se utilizara para la mainpulacion de la bases de datos
+type CuentaDAO struct{}
 
+// Retiro es el metodo encargado de realizar la acutalizacion del saldo en la base de datos
 func (cDAO *CuentaDAO) Retiro(cuenta models.Cuenta) error {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
 	defer cancel()
@@ -30,6 +31,8 @@ func (cDAO *CuentaDAO) Retiro(cuenta models.Cuenta) error {
 	return nil
 
 }
+
+// CambioNip es el metodo encargado de realizar el cambio del nip del cliente en la base de datos
 func (cDAO *CuentaDAO) CambioNip(cuenta models.Cuenta) error {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
 	defer cancel()

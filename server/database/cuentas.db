@@ -1,9 +1,0 @@
-INSERT INTO cuenta (
-    nombre,
-    saldo,
-    nip
-) VALUES (
-    "Pepe Sandoval",
-    2000,
-    1234
-);

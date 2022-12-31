@@ -10,6 +10,7 @@ import (
 )
 
 func main() {
+	// Establecemos la conexion con la bases de datos
 	database.NewConnection()
 	defer database.DBConn.Close()
 	if database.CheckConnection() {
